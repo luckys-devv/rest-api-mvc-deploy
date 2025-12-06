@@ -1,0 +1,32 @@
+### Recuperar todas las pelis
+GET http://localhost:3000/movies
+
+### Recuperar peli por ID
+GET http://localhost:3000/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+### Recuperar peli por genero - Con QueryParams
+GET http://localhost:3000/movies?genre=Action
+
+### Crear una peli
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "Luke SkyWalker",
+    "year": 2000,
+    "director": "Luke GG",
+    "duration": 200,
+    "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+    "genre": [
+      "Action"
+    ],
+    "rate": 9.3
+  }
+
+### Actualizar solo una parte de la peli
+PATCH http://localhost:3000/movies/44d3153a-edbe-4043-b13b-710d57b3ef47
+Content-Type: application/json
+
+{
+  "year": 1990
+}
