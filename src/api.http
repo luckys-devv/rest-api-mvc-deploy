@@ -2,7 +2,7 @@
 GET http://localhost:3000/movies
 
 ### Recuperar peli por ID
-GET http://localhost:3000/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+GET http://localhost:3000/movies/aae5b8b6-e213-43f2-bb45-ba5ceb06f161
 
 ### Recuperar peli por genero - Con QueryParams
 GET http://localhost:3000/movies?genre=Action
@@ -12,21 +12,22 @@ POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-    "title": "Luke SkyWalker",
-    "year": 2000,
-    "director": "Luke GG",
-    "duration": 200,
+    "title": "Arcadian",
+    "year": 1996,
+    "director": "Tarantino",
+    "duration": 1994,
     "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
-    "genre": [
-      "Action"
-    ],
-    "rate": 9.3
+    "genre":"Action",
+    "rate": 5
   }
 
 ### Actualizar solo una parte de la peli
-PATCH http://localhost:3000/movies/44d3153a-edbe-4043-b13b-710d57b3ef47
+PATCH http://localhost:3000/movies/6a360a18-c645-4b47-9a7b-2a71babbf3e0
 Content-Type: application/json
 
 {
-  "year": 1990
+  "year": 2023
 }
+
+### Borrar una pelicula
+DELETE http://localhost:3000/movies/6a360a18-c645-4b47-9a7b-2a71babbf3e0

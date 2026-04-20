@@ -5,14 +5,17 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch src/index.js"
+    "start:pg": "node --watch src/server-pg.js",
+    "start:local": "node --watch src/server-local.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "5.1.0",
+    "pg": "^8.20.0",
     "zod": "4.1.12"
   },
   "devDependencies": {

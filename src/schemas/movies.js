@@ -5,7 +5,11 @@ const movieSchema = z.object({
     invalid_type_error: 'El titulo debe ser un texto',
     required_error: 'El titulo es obligatorio'
   }).min(1),
-  genre: z.array(z.enum(['Action', 'Comedy', 'Drama', 'Horror', 'Romance', 'Fantasy', 'Thriller', 'Sci-Fi', 'Documentary'])),
+  // genre: z.array(z.enum(['Action', 'Comedy', 'Drama', 'Horror', 'Romance', 'Fantasy', 'Thriller', 'Sci-Fi', 'Documentary'])),
+  genre: z.string({
+    invalid_type_error: 'El genero debe ser un texto',
+    required_error: 'El genero es obligatorio'
+  }).min(1),
   year: z.number().int().min(1900).max(new Date().getFullYear()),
   director: z.string({
     invalid_type_error: 'El director debe ser un texto',
